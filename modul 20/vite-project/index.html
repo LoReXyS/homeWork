@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>vite-project</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="post">
+        <h2></h2>
+        <p></p>
+        <h1>Блог</h1>
+
+        <form id="createPostForm">
+          <input type="text" id="titleInput" placeholder="Заголовок" required />
+          <textarea id="contentInput" placeholder="Зміст" required></textarea>
+          <button type="submit" class="postsBtn">Створити пост</button>
+        </form>
+
+        <div id="postsContainer"></div>
+
+        <!-- <button class="editPostButton" data-id="">Редагувати</button>
+        <button class="deletePostButton" data-id="">Видалити</button> -->
+        <div class="commentsContainer" data-id="">
+          <h3>Коментарі:</h3>
+          <ul class="commentsList">
+            <li class="commentLi"></li>
+          </ul>
+          <form class="createCommentForm">
+            <input
+              type="text"
+              class="commentInput"
+              placeholder="Новий коментар"
+              required
+            />
+            <button type="submit" class="btnSubmit">Додати коментар</button>
+          </form>
+        </div>
+      </div>
+      <!-- <button id="openModalBtn">Open Modal</button> -->
+      <!-- modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Ви можете змінити комент!</h2>
+          <input type="text" id="forEditingComment" />
+          <button id="saveTheEdit">Зберегти зміни</button>
+          <button id="closeModalBtn">Close</button>
+        </div>
+      </div>
+      <!-- modal 2  -->
+      <div id="myModalPost" class="modal">
+        <div class="modal-content">
+          <span id="closePostModal" class="close-button">&times;</span>
+          <h2>Редагувати пост</h2>
+          <input id="editPostTitle" type="text" placeholder="Новий заголовок" />
+          <textarea id="editPostContent" placeholder="Новий зміст"></textarea>
+          <button id="saveEditPost">Зберегти зміни</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
